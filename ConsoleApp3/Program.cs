@@ -12,17 +12,32 @@ namespace ConsoleApp3
         {
 
              int x=5;
+             string name="ahmad";
 
              var y=x;
+             object n=name;
 
              var r=y.GetType();
 
-             Console.WriteLine(y.GetType());
+             Console.WriteLine("int:"+y.GetType());
+             Console.WriteLine("string:" + n.GetType());
 
-            string name="WWWESFRE4^'";
-             string res=RemoveDuplicate(name);
+             var f=new A();
+             var s=new A();
+
+             Console.WriteLine(f==s);
+             Console.WriteLine(f.Equals(s));
+
+            string input="WWWESFRE4^'";
+             string res=RemoveDuplicate(input);
              Console.WriteLine(res);
             Console.ReadKey();
+        }
+
+
+        public class A
+        {
+
         }
 
         private static string RemoveDuplicate(string name)
